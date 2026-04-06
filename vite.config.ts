@@ -4,8 +4,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: '.',
-  publicDir: '/public/',
+  publicDir: 'public',
   base: '/button-challenges/',
   plugins: [react(), tailwindcss()],
-  build: { outDir: '../dist', emptyOutDir: true },
 });
