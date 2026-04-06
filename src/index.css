@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --color-canvas: oklch(0.13 0.02 270);
+  --color-elevated: oklch(0.17 0.025 270);
+  --color-elevated-hover: oklch(0.2 0.03 270);
+  --color-border: oklch(0.28 0.03 270);
+  --color-ink: oklch(0.96 0.01 270);
+  --color-ink-muted: oklch(0.62 0.02 260);
+  --color-ink-faint: oklch(0.45 0.02 260);
+
+  --color-accent: oklch(0.72 0.17 295);
+  --color-accent-dim: oklch(0.55 0.14 295);
+
+  --color-kind-exp: oklch(0.72 0.16 305);
+  --color-kind-lin: oklch(0.78 0.14 165);
+  --color-kind-step: oklch(0.82 0.14 75);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply min-h-dvh bg-canvas font-sans text-ink antialiased;
+  }
+
+  /* Native inputs match app chrome */
+  input[type='number'] {
+    appearance: textfield;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}
